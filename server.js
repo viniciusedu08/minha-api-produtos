@@ -151,7 +151,7 @@ app.delete("/produtos/:id", (req, res) => {
     res.status(404).send("Deu ruim -- Produto não existe");
   }
 });
-S
+
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server rodando no http://localhost:${port}`);
