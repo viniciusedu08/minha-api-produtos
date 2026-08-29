@@ -73,7 +73,7 @@ Uma Collection do Postman está disponível no repositório para facilitar os te
 Arquivo:
 
 ```text
-minha-api-produtos.postman_collection.json
+Teste minha API.postman_collection.json
 ```
 
 Para utilizar, abra o Postman e importe o arquivo da Collection.
@@ -81,6 +81,8 @@ Para utilizar, abra o Postman e importe o arquivo da Collection.
 ## Deploy
 
 A API também está publicada utilizando a **Vercel**.
+
+[Link da API](https://minha-api-produtos-krqi.onrender.com)
 
 ## Autor
 
