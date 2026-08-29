@@ -152,7 +152,7 @@ app.delete("/produtos/:id", (req, res) => {
   }
 });
 S
-const port = 3000;
+const port = process.env.PORT || 3000;
 app.listen(port, () => {
   console.log(`Server rodando no http://localhost:${port}`);
 });
