@@ -88,11 +88,10 @@ const produtos = [
   },
 ];
 
-app.use(express.json());
+let proximoId = 13;
 
-app.get("/", (req, res) => {
-  res.send(`Olá estranho.`);
-});
+app.use(express.json());
+app.use(express.static("public"));
 
 app.get("/produtos", (req, res) => {
   res.json(produtos);
@@ -110,17 +109,17 @@ app.get("/produtos/:id", (req, res) => {
 });
 
 app.post("/produtos", (req, res) => {
-  const { id, nome, categoria, preco, estoque } = req.body;
-
-  const NovoId = produtos.length + 1;
+  const { nome, categoria, preco, estoque } = req.body;
 
   const NovoProduto = {
-    id: NovoId,
+    id: proximoId,
     nome,
     categoria,
     preco,
     estoque,
   };
+
+  proximoId = proximoId + 1;
 
   produtos.push(NovoProduto);
 
